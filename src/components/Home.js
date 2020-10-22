@@ -1,11 +1,12 @@
 import React from "react";
 import SingleSelect from "./Select";
+import Gallery from "./Gallery";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 export default class Home extends React.Component {
   render() {
     let { images } = this.props;
-    console.log(images);
     if (!images) {
       return (
         <div class="loader">
@@ -29,7 +30,8 @@ export default class Home extends React.Component {
                 <SingleSelect />
               </div>
             </div>
-            <div className="gallery-div grid">
+            <Gallery images={images} />
+            {/* <div className="gallery-div grid">
               {images.map((elem) => {
                 return (
                   <div>
@@ -42,9 +44,10 @@ export default class Home extends React.Component {
                   </div>
                 );
               })}
-            </div>
+            </div> */}
           </div>
         </section>
+        <Footer />
       </>
     );
   }

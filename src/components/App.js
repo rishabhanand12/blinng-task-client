@@ -5,10 +5,12 @@ import Form from "./Form";
 import Header from "./Header";
 import Detail from "./Detail";
 
+
 class App extends React.Component {
   state = {
     images: null,
   };
+
   async componentDidMount() {
     try {
       let url = "http://localhost:5000/api/banner";
@@ -23,6 +25,7 @@ class App extends React.Component {
       console.error(err);
     }
   }
+
   render() {
     return (
       <>
@@ -38,6 +41,7 @@ class App extends React.Component {
             <Detail />
           </Route>
         </Switch>
+        
       </>
     );
   }
