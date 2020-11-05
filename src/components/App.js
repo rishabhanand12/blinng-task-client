@@ -5,7 +5,6 @@ import Form from "./Form";
 import Header from "./Header";
 import Detail from "./Detail";
 
-
 class App extends React.Component {
   state = {
     images: null,
@@ -41,7 +40,6 @@ class App extends React.Component {
             <Detail />
           </Route>
         </Switch>
-        
       </>
     );
   }
